@@ -52,10 +52,10 @@ class Partida
   end
 
   def adicionar_dez_porcento
-    jogador1.pulos_bonus = (jogador1.pulos_totais * 1.1).round if pulos_iguais? @pulos_por_partida1
+    jogador1.pulos_bonus += (jogador1.pulos_totais * 0.1).round if pulos_iguais? @pulos_por_partida1
     return unless pulos_iguais? @pulos_por_partida2
 
-    jogador2.pulos = (jogador2.pulos_totais * 1.1).round
+    jogador2.pulos_bonus += (jogador2.pulos_totais * 0.1).round
   end
 
   def punir?(pulos)
@@ -77,6 +77,7 @@ class Partida
   def winner
     jog1 = jogador1
     jog2 = jogador2
+
     @winner ||= jog1.pulos_totais > jog2.pulos_totais ? jog1 : jog2
   end
 
