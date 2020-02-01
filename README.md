@@ -13,7 +13,6 @@
 Para gerar o relatorio com os resultados siga os seguintes passos:
 
 - Clone o repositório em um diretório de sua escolha  <https://github.com/camfilho/vaga-ror-fortaleza>
-- Navigate to the folder containing the repo in your terminal and enter (cd oop-tic-tac-toe/bin/)
 - Navegue para o diretório contendo o repositório no seu terminal e entre (cd vaga-ror-fortaleza)
 - Gere o relatório digitando (`./main.rb`)
 - O resultado final será gerado no `resultado.csv`
