@@ -1,7 +1,6 @@
 require_relative '../lib/partida.rb'
 
 describe Partida do
-
   describe '#pontuar_partida' do
     context 'partida com jogador1 vitorioso' do
       it 'adiciona ponto de vitoria para jogador1' do
