@@ -45,7 +45,6 @@ class Partida
     jogador2
       .pulos_bonus += @pulos_por_partida2
         .reduce(0) { |acc, pulos| pulos > 10 ? acc + 2 : acc }
-
   end
 
   def pulos_iguais?(pulos)
