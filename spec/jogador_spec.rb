@@ -1,7 +1,6 @@
 require_relative '../lib/jogador.rb'
 
 describe Jogador do
-
   before(:each) do
     @jogador = described_class.new('Player Name')
   end

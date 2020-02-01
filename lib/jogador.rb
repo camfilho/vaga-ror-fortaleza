@@ -44,14 +44,14 @@ class Jogador
     pulos + pulos_bonus
   end
 
-  def +(jogador)
-    jg = Jogador.new(jogador.name)
-    jg.num_vitoria_fora = num_vitoria_fora + jogador.num_vitoria_fora
-    jg.num_vitoria_casa = jogador.num_vitoria_casa + num_vitoria_casa
-    jg.pontos_empate = jogador.pontos_empate + pontos_empate
-    jg.punicao = jogador.punicao + punicao
-    jg.pulos = jogador.pulos + pulos
-    jg.pulos_bonus = jogador.pulos_bonus + pulos_bonus
+  def +(other)
+    jg = Jogador.new(other.name)
+    jg.num_vitoria_fora = num_vitoria_fora + other.num_vitoria_fora
+    jg.num_vitoria_casa = other.num_vitoria_casa + num_vitoria_casa
+    jg.pontos_empate = other.pontos_empate + pontos_empate
+    jg.punicao = other.punicao + punicao
+    jg.pulos = other.pulos + pulos
+    jg.pulos_bonus = other.pulos_bonus + pulos_bonus
     jg
   end
 end
