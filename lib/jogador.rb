@@ -25,4 +25,14 @@ class Jogador
     @pulos = 0
     @pulos_bonus = 0
   end
+
+  def pontos_vitoria
+    (num_vitoria_casa + num_vitoria_fora) * PONTOS_POR_VITORIA
+  end
+
+  public
+
+  def pontos_totais
+    (pontos_vitoria + pontos_empate) - punicao
+  end
 end
