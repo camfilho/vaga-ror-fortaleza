@@ -35,4 +35,23 @@ class Jogador
   def pontos_totais
     (pontos_vitoria + pontos_empate) - punicao
   end
+
+  def num_vitoria_totais
+    num_vitoria_casa + num_vitoria_fora
+  end
+
+  def pulos_totais
+    pulos + pulos_bonus
+  end
+
+  def +(jogador)
+    jg = Jogador.new(jogador.name)
+    jg.num_vitoria_fora = num_vitoria_fora + jogador.num_vitoria_fora
+    jg.num_vitoria_casa = jogador.num_vitoria_casa + num_vitoria_casa
+    jg.pontos_empate = jogador.pontos_empate + pontos_empate
+    jg.punicao = jogador.punicao + punicao
+    jg.pulos = jogador.pulos + pulos
+    jg.pulos_bonus = jogador.pulos_bonus + pulos_bonus
+    jg
+  end
 end
